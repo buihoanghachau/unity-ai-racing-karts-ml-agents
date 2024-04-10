@@ -52,10 +52,12 @@ public class KartController : MonoBehaviour
       
       steeringWheel.localEulerAngles = new Vector3(-25, 90, ((input * 45)));
    }
-   
+
+    [SerializeField] private bool isImintation;
+
    public void Respawn()
    {
-      Vector3 pos = _spawnPointManager.SelectRandomSpawnpoint();
+      Vector3 pos = _spawnPointManager.SelectRandomSpawnpoint(isImintation);
       sphere.MovePosition(pos);
       transform.position = pos - new Vector3(0, 0.4f, 0);
    }

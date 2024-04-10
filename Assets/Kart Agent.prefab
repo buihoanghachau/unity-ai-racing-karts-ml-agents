@@ -1082,6 +1082,7 @@ GameObject:
   - component: {fileID: 2445128385761633918}
   - component: {fileID: 1728441811689204408}
   - component: {fileID: 6206715592528692502}
+  - component: {fileID: 3998330207844487854}
   m_Layer: 2
   m_Name: Kart
   m_TagString: Untagged
@@ -1121,7 +1122,7 @@ MonoBehaviour:
   kartNormal: {fileID: 3137537922403377517}
   sphere: {fileID: 3137537921078816491}
   acceleration: 65
-  steering: 15
+  steering: 30
   gravity: 25
   layerMask:
     serializedVersion: 2
@@ -1129,6 +1130,7 @@ MonoBehaviour:
   frontWheels: {fileID: 3137537921143488001}
   backWheels: {fileID: 3137537921864692967}
   steeringWheel: {fileID: 3137537921393488640}
+  isImintation: 0
 --- !u!114 &3137537921882263140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1246,6 +1248,22 @@ MonoBehaviour:
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
   m_StartVerticalOffset: 0
   m_EndVerticalOffset: 0
+--- !u!114 &3998330207844487854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3137537921882263138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2902496c0120472b90269f94a0aec7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Record: 0
+  NumStepsToRecord: 0
+  DemonstrationName: RacingKart
+  DemonstrationDirectory: ImitationDemo
 --- !u!1 &3137537922403377426
 GameObject:
   m_ObjectHideFlags: 0
