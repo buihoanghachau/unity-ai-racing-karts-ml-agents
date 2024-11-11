@@ -1,0 +1,5 @@
+conda activate mlagents
+
+mlagents-learn config/KartAgent.yaml --run-id=KartRunSimple --resume
+
+tensorboard --logdir results --port 6006
