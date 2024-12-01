@@ -66,19 +66,15 @@ public class KartController : MonoBehaviour
    {
       sphere.AddForce(-kartModel.transform.right * currentSpeed, ForceMode.Acceleration);
 
-      //Gravity
       sphere.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
       
-      //Follow Collider
       transform.position = sphere.transform.position - new Vector3(0, 0.4f, 0);
 
-      //Steering
       transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, transform.eulerAngles.y + currentRotate, 0), Time.deltaTime * 5f);
       
       Physics.Raycast(transform.position + (transform.up*.1f), Vector3.down, out RaycastHit hitOn, 1.1f,layerMask);
       Physics.Raycast(transform.position + (transform.up * .1f)   , Vector3.down, out RaycastHit hitNear, 2.0f, layerMask);
 
-      //Normal Rotation
       kartNormal.up = Vector3.Lerp(kartNormal.up, hitNear.normal, Time.deltaTime * 8.0f);
       kartNormal.Rotate(0, transform.eulerAngles.y, 0);
    }
