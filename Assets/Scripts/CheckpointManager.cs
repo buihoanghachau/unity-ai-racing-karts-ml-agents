@@ -7,6 +7,7 @@ public class CheckpointManager : MonoBehaviour
 {
     public float MaxTimeToReachNextCheckpoint = 30f;
     public float TimeLeft = 30f;
+    public int maxCollisionHitCount;
     
     public KartAgent kartAgent;
     public Checkpoint nextCheckPointToReach;
